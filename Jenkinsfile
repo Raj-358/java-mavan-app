@@ -1,14 +1,15 @@
-pipeline (
+pipeline {
   agent any
-  stages (
-    stage(  Build ) (
+  stages {
+    stage( "Build" ) {
 
-      steps (
+      steps {
          sh 'echo test'
-         sh
-           echo "multi line" ls -lrt
+         sh '''
+           echo "multi line"
+           ls -lrt
          '''
-       )
-     )
-   )
-)
+       }
+     }
+   }
+}
